@@ -1,0 +1,1 @@
+(()=>{"use strict";const o=console.log("yaaaaaay");console.log(o)})();
