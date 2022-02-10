@@ -1,4 +1,6 @@
 import "./style.scss";
-import { first } from "./modules/firstLoad";
+import { first, Loader } from "./modules/firstLoad";
+
+Loader();
 
 console.log(first);

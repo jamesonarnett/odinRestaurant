@@ -1,23 +1,26 @@
-const first = console.log("Not so yaaaaaay");
+const first = console.log("Yaaaaaay");
 
-// class makeElement {
-//   constructor(type, content) {
-//     this.type = type;
-//     this.content = content;
-//   }
-
-//     newEl = document.createElement(this.type);
-// }
-
-const Header = () => {
-  const head = document.createElement("div");
-  head.id = "header";
-
-  head.textContent("This is supposed to work");
+const Header = (id, text) => {
+  const head = document.createElement("header");
+  head.setAttribute("id", id);
   head.style.color = "white";
   head.style.backgroundColor = "black";
+
+  const headText = document.createElement("p");
+  headText.classList.add("header-text");
+  headText.textContent = text;
+  head.appendChild(headText);
 
   return head;
 };
 
-export { first };
+const main = () => {};
+
+const Loader = () => {
+  const content = document.getElementById("content");
+
+  let header = Header("header", "Star Food");
+  content.appendChild(header);
+};
+
+export { first, Loader };

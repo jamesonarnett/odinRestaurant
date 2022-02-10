@@ -1,7 +1,31 @@
-$bg: black;
-$color: orange;
+$bg: rgb(73, 8, 73);
+$color: white;
+
+@font-face {
+  font-family: sw;
+  src: url(../dist/sw.ttf);
+}
+
+html {
+  font-family: sw;
+}
 
 body {
   background-color: $bg;
   color: $color;
+  margin: 0;
+}
+
+#header {
+  height: 12vh;
+
+  p {
+    margin: 0;
+  }
+}
+
+.header-text {
+  text-align: center;
+  font-size: 4rem;
+  text-shadow: rgb(0, 113, 206) 1px 0 10px;
 }
