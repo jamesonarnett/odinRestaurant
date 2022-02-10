@@ -1,4 +1,4 @@
-const first = console.log("yaaaaaay");
+const first = console.log("Not so yaaaaaay");
 
 // class makeElement {
 //   constructor(type, content) {
