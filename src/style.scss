@@ -1,6 +1,6 @@
 $bg: rgb(0, 113, 206);
 $bg2: black;
-$color: white;
+$w: white;
 
 @font-face {
   font-family: sw;
@@ -13,12 +13,12 @@ html {
 
 body {
   background-color: $bg;
-  color: $color;
+  color: $w;
   margin: 0;
 }
 
 #header {
-  color: white;
+  color: $w;
   background-color: $bg2;
 
   p {
@@ -36,9 +36,11 @@ body {
 .header-button-container {
   display: flex;
   justify-content: space-around;
+  padding: 0 0.1rem;
 
   button {
     width: 33vw;
+    border-radius: 5px;
   }
 
   button:hover {
@@ -50,6 +52,21 @@ body {
     letter-spacing: 2px;
     font-size: 20px;
   }
+}
+
+#menu:hover {
+  background-color: rgb(11, 199, 11);
+  border: 2px solid rgb(11, 199, 11);
+}
+
+#home:hover {
+  background-color: rgb(158, 1, 158);
+  border: 2px solid rgb(158, 1, 158);
+}
+
+#contact:hover {
+  background-color: rgb(253, 7, 7);
+  border: 2px solid rgb(253, 7, 7);
 }
 
 .about-header {

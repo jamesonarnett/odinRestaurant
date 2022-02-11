@@ -41,7 +41,6 @@ const MainSection = (id, header, content) => {
   about.classList.add("about");
 
   const aboutHeader = document.createElement("h1");
-  console.log(aboutHeader);
   aboutHeader.textContent = header;
   aboutHeader.classList.add("about-header");
 
