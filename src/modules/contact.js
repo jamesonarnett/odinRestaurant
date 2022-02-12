@@ -7,6 +7,7 @@ const contactHeader = (title) => {
 
 const ContactPage = () => {
   const main = document.getElementById("main");
+  main.classList.add("tab-content");
 
   let contactTitle = contactHeader("Contact a Jedi");
 

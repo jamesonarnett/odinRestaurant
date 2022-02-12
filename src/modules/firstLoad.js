@@ -1,6 +1,7 @@
 const createBtn = (id, text) => {
   const button = document.createElement("button");
   button.setAttribute("id", id);
+  button.classList.add("tab-links");
 
   const span = document.createElement("span");
   span.textContent = text;
@@ -35,22 +36,10 @@ const Header = (id, text) => {
   return head;
 };
 
-const MainSection = (id, header, content) => {
+const MainSection = (id) => {
   const about = document.createElement("div");
   about.setAttribute("id", id);
   about.classList.add("about");
-
-  const aboutHeader = document.createElement("h1");
-  aboutHeader.textContent = header;
-  aboutHeader.classList.add("about-header");
-
-  about.appendChild(aboutHeader);
-
-  const aboutContent = document.createElement("p");
-  aboutContent.textContent = content;
-  aboutContent.classList.add("about-content");
-
-  about.appendChild(aboutContent);
 
   return about;
 };
@@ -72,13 +61,7 @@ const FirstPageLoader = () => {
 
   const header = Header("header", "Star Food");
 
-  const about = MainSection(
-    "main",
-    "About",
-    `The best food across all the galaxies. Stop by today to try our new Jaba Toes!
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque id mauris eget elementum. Ut malesuada lacinia nisi, ut viverra odio elementum sed. Quisque p
-  `
-  );
+  const about = MainSection("main");
 
   const footer = Footer("Made by the Force");
 
