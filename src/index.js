@@ -2,7 +2,7 @@ import "./style.scss";
 import { FirstPageLoader } from "./modules/firstLoad";
 import ContactPage from "./modules/contact";
 import HomePage from "./modules/home";
-// import MenuPage from "./modules/menu";
+import MenuPage from "./modules/menu";
 
 loadPage();
 
@@ -17,12 +17,15 @@ function navEvents() {
   console.log(tabs);
 
   homeBtn.addEventListener("click", () => {
-    main.remove();
-    main.style.display = "block";
+    removeTabs();
     HomePage();
   });
-  // menuBtn.addEventListener("click", () => MenuPage);
+  menuBtn.addEventListener("click", () => {
+    removeTabs();
+    MenuPage();
+  });
   contactBtn.addEventListener("click", () => {
+    removeTabs();
     ContactPage();
   });
 }
@@ -32,4 +35,14 @@ function loadPage() {
   main.style.display = "block";
   HomePage();
   navEvents();
+}
+
+function removeTabs() {
+  let tabcontent = document.getElementsByClassName("tab-content");
+  for (let i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    main.textContent = "";
+  }
+
+  main.style.display = "block";
 }
