@@ -8,7 +8,7 @@ const MainSection = (id, header, content) => {
 
   const aboutHeader = document.createElement("h1");
   aboutHeader.textContent = header;
-  aboutHeader.classList.add("about-header");
+  aboutHeader.classList.add("about-title");
 
   about.appendChild(aboutHeader);
 
@@ -27,7 +27,7 @@ const HomePage = () => {
     "main",
     "About",
     `The best food across all the galaxies. Stop by today to try our new Jaba Toes!
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque id mauris eget elementum. Ut malesuada lacinia nisi, ut viverra odio elementum sed. Quisque p
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc pellentesque id mauris eget elementum. Ut malesuada lacinia nisi, ut viverra odio elementum sed. Quisque
         `
   );
 

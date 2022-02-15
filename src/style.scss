@@ -12,13 +12,25 @@ html {
 }
 
 body {
-  background-color: $bg;
+  background-image: url(../starwarsImg1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   color: $w;
   margin: 0;
+  overflow: hidden;
+}
+
+p,
+h1,
+h2 {
+  color: rgb(255, 238, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(0, 0, 0);
 }
 
 #header {
-  color: $w;
   background-color: $bg2;
 
   p {
@@ -30,7 +42,7 @@ body {
   text-align: center;
   font-size: 4rem;
   letter-spacing: 10px;
-  text-shadow: rgb(253, 7, 7) 1px 0 12px;
+  text-shadow: rgb(0, 113, 206) 1px 0 12px;
 }
 
 .header-button-container {
@@ -40,11 +52,16 @@ body {
 
   button {
     width: 33vw;
+    height: 6vh;
     border-radius: 5px;
   }
 
   button:hover {
     cursor: pointer;
+
+    span {
+      font-size: 30px;
+    }
   }
 
   span {
@@ -54,25 +71,43 @@ body {
   }
 }
 
-#menu:hover {
-  background-color: rgb(11, 199, 11);
-  border: 2px solid rgb(11, 199, 11);
-}
+// #menu {
+//   background-color: rgb(11, 199, 11);
+//   border: 2px solid rgb(11, 199, 11);
+//   opacity: 40%;
+// }
 
-#home:hover {
-  background-color: rgb(158, 1, 158);
-  border: 2px solid rgb(158, 1, 158);
-}
+// #menu:hover {
+//   opacity: 100%;
+// }
 
-#contact:hover {
-  background-color: rgb(253, 7, 7);
-  border: 2px solid rgb(253, 7, 7);
-}
+// #home {
+//   background-color: rgb(158, 1, 158);
+//   border: 2px solid rgb(158, 1, 158);
+//   opacity: 40%;
+// }
 
-.about-header {
+// #home:hover {
+//   opacity: 100%;
+// }
+
+// #contact {
+//   background-color: rgb(253, 7, 7);
+//   border: 2px solid rgb(253, 7, 7);
+//   opacity: 40%;
+// }
+
+// #contact:hover {
+//   opacity: 100%;
+// }
+
+.about-title,
+.menu-title,
+.contact-title {
   text-align: center;
   padding-top: 2rem;
   letter-spacing: 2px;
+  text-shadow: 1px 1px 2px $bg2;
 }
 
 .about-content {
@@ -81,6 +116,27 @@ body {
   text-align: center;
   line-height: 2;
   word-spacing: 15%;
+  font-size: larger;
+}
+
+.menu-item-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu-item {
+  background-color: $bg2;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+  margin: 1rem;
+}
+
+.food-img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .tab-content {
@@ -88,16 +144,24 @@ body {
   display: none;
 }
 
-.contact-title {
-  text-align: center;
+.phone-div,
+.address-div {
+  justify-content: center;
   letter-spacing: 2px;
-}
+  display: flex;
+  align-items: center;
 
-.menu-title {
-  text-align: center;
-  letter-spacing: 2px;
+  p {
+    font-size: larger;
+    padding-left: 2rem;
+  }
+  h2 {
+    text-shadow: 1px 1px 2px $bg2;
+  }
 }
-
+.address-left {
+  margin-left: 5rem;
+}
 .footer {
   background-color: $bg2;
   text-align: center;
@@ -105,6 +169,7 @@ body {
   bottom: 0;
   width: 100%;
   height: 60px;
+  margin-top: 2rem;
 
   p {
     margin-bottom: 0;
