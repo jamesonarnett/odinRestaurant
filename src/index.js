@@ -1,5 +1,5 @@
 import "./style.scss";
-import { FirstPageLoader } from "./modules/firstLoad";
+import FirstPageLoader from "./modules/firstLoad";
 import ContactPage from "./modules/contact";
 import HomePage from "./modules/home";
 import MenuPage from "./modules/menu";

@@ -58,6 +58,7 @@ const Footer = (text) => {
 
 const FirstPageLoader = () => {
   const content = document.getElementById("content");
+  const body = document.getElementById("body");
 
   const header = Header("header", "Star Food");
 
@@ -67,7 +68,7 @@ const FirstPageLoader = () => {
 
   content.appendChild(header);
   content.appendChild(about);
-  content.appendChild(footer);
+  body.appendChild(footer);
 };
 
-export { FirstPageLoader };
+export default FirstPageLoader;
